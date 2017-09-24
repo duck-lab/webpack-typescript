@@ -1,8 +1,10 @@
 # vue-webpack-boilerplate
 
-> A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
+A full-featured Webpack setup with hot-reload, <del>lint-on-save, unit testing</del> & css extraction.
 
-> This template is Vue 2.0 compatible. For Vue 1.x use this command: `vue init webpack#1.0 my-project`
+## Note
+
+This template is still __WIP__, not support lint and unit testing for now, you can try it by `vue init ElemeFE/webpack-typescript#develop project-name` for now.
 
 ## Documentation
 
