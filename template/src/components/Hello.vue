@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>\{{ msg }}</h1>
+    <button type="button" @click="reverseAppName">reverse</button>
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -24,13 +25,22 @@
 import Vue  from 'vue'
 import Component from 'vue-class-component'
 
-@Component({
-  props: {}
-})
-
+@Component
 export default class Hello extends Vue {
+  // data
   name: string = 'hello'
-  msg: string = 'Welcome to Your Vue.js App'
+  welcomeMsg: string = 'Welcome to Your'
+  appName: string = 'Vue.js App'
+
+  // computed
+  get msg () {
+    return this.welcomeMsg + ' ' + this.appName
+  }
+
+  // methods
+  reverseAppName () {
+    this.appName = this.appName.split('').reverse().join('')
+  }
 }
 </script>
 

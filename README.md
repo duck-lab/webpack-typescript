@@ -1,10 +1,12 @@
 # vue-webpack-boilerplate
 
-A full-featured Webpack setup with hot-reload, <del>lint-on-save, unit testing</del> & css extraction.
+A full-featured Webpack setup with hot-reload, lint-on-save,<del>unit testing</del> & css extraction.
 
 ## Note
 
-This template is still __WIP__, not support lint and unit testing for now, you can try it by `vue init ElemeFE/webpack-typescript#develop project-name` for now.
+- This template is still __WIP__, not support unit testing for now, you can try it by `vue init ElemeFE/webpack-typescript project-name` for now.
+
+- Linter is not stable since tslint does not support `.vue` file, we just trick it to make it works.
 
 ## Documentation
 
@@ -17,7 +19,7 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 
 ``` bash
 $ npm install -g vue-cli
-$ vue init webpack my-project
+$ vue init ElemeFE/webpack-typescript my-project
 $ cd my-project
 $ npm install
 $ npm run dev

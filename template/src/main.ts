@@ -9,7 +9,9 @@ import router from './router'
 {{/router}}
 
 Vue.config.productionTip = false
-
+{{#lint}}
+/* tslint:disable:no-unused-expression */
+{{/lint}}
 new Vue({
   el: '#app',
   {{#router}}
@@ -18,3 +20,6 @@ new Vue({
   template: '<App/>',
   components: { App }
 })
+{{#lint}}
+/* tslint:enable:no-unused-expression */
+{{/lint}}

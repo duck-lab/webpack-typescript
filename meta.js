@@ -44,32 +44,27 @@ module.exports = {
       "type": "confirm",
       "message": "Install vue-router?"
     },
-    // "lint": {
-    //   "type": "confirm",
-    //   "message": "Use ESLint to lint your code?"
-    // },
-    // "lintConfig": {
-    //   "when": "lint",
-    //   "type": "list",
-    //   "message": "Pick an ESLint preset",
-    //   "choices": [
-    //     {
-    //       "name": "Standard (https://github.com/feross/standard)",
-    //       "value": "standard",
-    //       "short": "Standard"
-    //     },
-    //     {
-    //       "name": "Airbnb (https://github.com/airbnb/javascript)",
-    //       "value": "airbnb",
-    //       "short": "Airbnb"
-    //     },
-    //     {
-    //       "name": "none (configure it yourself)",
-    //       "value": "none",
-    //       "short": "none"
-    //     }
-    //   ]
-    // },
+    "lint": {
+      "type": "confirm",
+      "message": "[UNStable]Use TSLint to lint your code?"
+    },
+    "lintConfig": {
+      "when": "lint",
+      "type": "list",
+      "message": "Pick a TSLint preset",
+      "choices": [
+        {
+          "name": "Standard (https://github.com/blakeembrey/tslint-config-standard)",
+          "value": "standard",
+          "short": "Standard"
+        },
+        {
+          "name": "none (configure it yourself)",
+          "value": "none",
+          "short": "none"
+        }
+      ]
+    },
     // "unit": {
     //   "type": "confirm",
     //   "message": "Setup unit tests with Karma + Mocha?"
@@ -80,8 +75,7 @@ module.exports = {
     // }
   },
   "filters": {
-    // ".eslintrc.js": "lint",
-    // ".eslintignore": "lint",
+    "tslint.json": "lint",
     // "config/test.env.js": "unit || e2e",
     // "test/unit/**/*": "unit",
     // "build/webpack.test.conf.js": "unit",
