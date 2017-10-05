@@ -42,6 +42,14 @@ module.exports = {
           appendTsSuffixTo: [/\.vue$/],
         }
       },
+      {{#lint}}
+      {
+        test: /\.tsx?$/,
+        loader: 'tslint-loader',
+        exclude: /node_modules/,
+        enforce: 'pre'
+      },
+      {{/lint}}
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
