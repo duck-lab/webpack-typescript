@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>\{{ msg }}</h1>
+    <button type="button" @click="reverseAppName">reverse</button>
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -20,34 +21,45 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'hello',
-  data{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
-    return {
-      msg: 'Welcome to Your Vue.js App'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-    }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-  }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-}{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+<script lang="ts">
+import Vue  from 'vue'
+import Component from 'vue-class-component'
+
+@Component
+export default class Hello extends Vue {
+  // data
+  name: string = 'hello'
+  welcomeMsg: string = 'Welcome to Your'
+  appName: string = 'Vue.js App'
+
+  // computed
+  get msg () {
+    return this.welcomeMsg + ' ' + this.appName
+  }
+
+  // methods
+  reverseAppName () {
+    this.appName = this.appName.split('').reverse().join('')
+  }
+}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
+<style>
+  h1, h2 {
+    font-weight: normal;
+  }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
 
-a {
-  color: #42b983;
-}
+  a {
+    color: #42b983;
+  }
 </style>
