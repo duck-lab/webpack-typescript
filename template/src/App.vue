@@ -10,14 +10,11 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import Component from 'vue-class-component'
 {{#unless router}}
 import Hello from './components/Hello'
 
 {{/unless}}
-@Component
-export default class App extends Vue {
+export default {
   name: 'app'{{#router}}{{else}},
   components: {
     Hello
