@@ -22,24 +22,24 @@
 </template>
 
 <script lang="ts">
-import Vue  from 'vue'
-import Component from 'vue-class-component'
+export default {
+  data (): any {
+    return {
+      welcomeMsg: 'Welcome to Your',
+      appName: 'Vue.js App'
+    }
+  },
 
-@Component
-export default class Hello extends Vue {
-  // data
-  name: string = 'hello'
-  welcomeMsg: string = 'Welcome to Your'
-  appName: string = 'Vue.js App'
+  computed: {
+    msg (): string {
+      return this.welcomeMsg + ' ' + this.appName
+    }
+  },
 
-  // computed
-  get msg () {
-    return this.welcomeMsg + ' ' + this.appName
-  }
-
-  // methods
-  reverseAppName () {
-    this.appName = this.appName.split('').reverse().join('')
+  methods: {
+    reverseAppName (): void {
+      this.appName = this.appName.split('').reverse().join('')
+    }
   }
 }
 </script>
