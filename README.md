@@ -1,5 +1,5 @@
-# vue-webpack-boilerplate
-
+# vue-webpack-typescript-boilerplate
+** Support ElementUI **
 A full-featured Webpack setup with hot-reload, lint-on-save,<del>unit testing</del> & css extraction.
 
 ## Note
@@ -19,7 +19,7 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 
 ``` bash
 $ npm install -g vue-cli
-$ vue init ElemeFE/webpack-typescript my-project
+$ vue init duck-lab/webpack-typescript my-project
 $ cd my-project
 $ npm install
 $ npm run dev

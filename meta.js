@@ -44,6 +44,10 @@ module.exports = {
       "type": "confirm",
       "message": "Install vue-router?"
     },
+    "element": {
+      "type": "confirm",
+      "message": "Use ElementUI?"
+    },
     "lint": {
       "type": "confirm",
       "message": "[UNStable]Use TSLint to lint your code?"
@@ -65,22 +69,22 @@ module.exports = {
         }
       ]
     },
-    // "unit": {
-    //   "type": "confirm",
-    //   "message": "Setup unit tests with Karma + Mocha?"
-    // },
-    // "e2e": {
-    //   "type": "confirm",
-    //   "message": "Setup e2e tests with Nightwatch?"
-    // }
+    "unit": {
+      "type": "confirm",
+      "message": "Setup unit tests with Karma + Mocha?"
+    },
+    "e2e": {
+      "type": "confirm",
+      "message": "Setup e2e tests with Nightwatch?"
+    }
   },
   "filters": {
     "tslint.json": "lint",
-    // "config/test.env.js": "unit || e2e",
-    // "test/unit/**/*": "unit",
-    // "build/webpack.test.conf.js": "unit",
-    // "test/e2e/**/*": "e2e",
+    "config/test.env.js": "unit || e2e",
+    "test/unit/**/*": "unit",
+    "build/webpack.test.conf.js": "unit",
+    "test/e2e/**/*": "e2e",
     "src/router/**/*": "router"
   },
-  "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at https://vuejs-templates.github.io/webpack"
+  "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at https://github.com/duck-lab/webpack-typescript"
 };

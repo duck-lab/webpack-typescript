@@ -13,7 +13,9 @@
     "test": "{{#unit}}npm run unit{{/unit}}{{#unit}}{{#e2e}} && {{/e2e}}{{/unit}}{{#e2e}}npm run e2e{{/e2e}}"{{/if_or}}
   },
   "dependencies": {
-    "vue": "^2.5.2"{{#router}},
+    {{#element}}"element-ui": "^1.4.6",{{/element}}
+    "vue": "^2.5.2",
+    "vue-class-component": "^6.0.0"{{#router}},
     "vue-router": "^3.0.1"{{/router}}
   },
   "devDependencies": {
